@@ -6,14 +6,14 @@
  * Made By MaterializeCSS.com
  */
 
-.icon-block {
+ .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
 	font-size: inherit;
 }
 
- /* body fix: perquè ocupi tota la pantalla */
+/* body fix: perquè ocupi tota la pantalla */
 html, body {
   height: 100vh;
   width: 100%;
@@ -27,6 +27,6 @@ html, body {
  * per solucionar el contingut scollable de cada pestanya
  */
 .tabs-content {
-  height: 100%;
+  height: 80vh !important;
   overflow-y: scroll !important;
 }
