@@ -30,3 +30,18 @@ html, body {
   height: 80vh !important;
   overflow-y: scroll !important;
 }
+
+#test-swipe-2 {
+  transform: translateX(0px) translateY(0px) translateZ(0px) !important;
+}
+
+#test-swipe-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-field, .input-field > label {
+  color: black !important;
+}

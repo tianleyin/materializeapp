@@ -29,6 +29,13 @@ document.addEventListener('DOMContentLoaded', function () {
   var tabs = document.querySelectorAll('.tabs');
   M.Tabs.init(tabs);
 
+  tabs.forEach(function (tab) {
+    tab.addEventListener('shown', function () {
+      M.updateTextFields(); // Actualizar los campos de texto si es necesario
+      M.AutoInit(); // Volver a inicializar los elementos de Materialize en la pestaña activa
+    });
+  });
+
   // Evento de clic para el botón de búsqueda
   document.getElementById('searchBtn').addEventListener('click', function () {
     // Obtener el término de búsqueda ingresado por el usuario
@@ -69,6 +76,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Agregar la lista de resultados al segundo tab
         resultsTab.appendChild(resultList);
+
+        // Seleccionar automáticamente el tab test-swipe-2
+        var instance = M.Tabs.getInstance(tabs[0]); // Obtener la instancia de los tabs
+        instance.select('test-swipe-2'); // Seleccionar el tab test-swipe-2
+
+
       })
       .catch(function (error) {
         // Manejar cualquier error que ocurra durante la solicitud
